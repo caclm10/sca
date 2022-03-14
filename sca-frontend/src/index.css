@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body,
+  html {
+    @apply h-full;
+  }
+}
+
+@layer components {
+  #root {
+    @apply h-full;
+  }
+
+  .form-input {
+    @apply w-full rounded-md;
+  }
+
+  .form-input.invalid {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+  }
+
+  .invalid-feedback {
+    @apply text-sm text-red-500;
+  }
+
+  .btn {
+    @apply py-1.5 px-3 border rounded-md active:ring;
+  }
+
+  .btn.icon-only {
+    @apply p-2;
+  }
+
+  .btn.black {
+    @apply bg-black border-black text-white active:ring-black/40;
+  }
+
+  .btn.neutral {
+    @apply bg-neutral-400 border-neutral-400 text-white active:ring-neutral-400/40;
+  }
+
+  .btn.red {
+    @apply bg-red-500 border-red-500 text-white active:ring-red-500/40;
+  }
+}
